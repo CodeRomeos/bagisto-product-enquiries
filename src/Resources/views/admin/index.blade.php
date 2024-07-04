@@ -2,12 +2,12 @@
 
     <!-- Title of the page -->
     <x-slot:title>
-        Package BagistoBookings
+        Package BagistoProductEnquiries
     </x-slot>
 
     <!-- Page Content -->
     <div class="page-content">
-        <h1>Package BagistoBookings</h1>
+        <h1>Package BagistoProductEnquiries</h1>
     </div>
 
 </x-admin::layouts>

@@ -2,10 +2,10 @@
 
     <!-- Title of the page -->
     <x-slot:title>
-        Package BagistoBookings
+        Package BagistoProductEnquiries
     </x-slot>
 
     <div class="main">
-        Package BagistoBookings
+        Package BagistoProductEnquiries
     </div>
 </x-shop::layouts>

@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use CodeRomeos\BagistoBookings\Http\Controllers\Shop\BagistoBookingsController;
+use CodeRomeos\BagistoProductEnquiries\Http\Controllers\Shop\BagistoProductEnquiriesController;
 
-Route::group(['middleware' => ['web', 'theme', 'locale', 'currency'], 'prefix' => 'bagistobookings'], function () {
-    Route::get('', [BagistoBookingsController::class, 'index'])->name('shop.bagistobookings.index');
+Route::group(['middleware' => ['web', 'theme', 'locale', 'currency'], 'prefix' => 'bagistoProductEnquiries'], function () {
+    Route::get('', [BagistoProductEnquiriesController::class, 'index'])->name('shop.bagistoProductEnquiries.index');
 });

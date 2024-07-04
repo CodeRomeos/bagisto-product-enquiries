@@ -24,9 +24,9 @@ export default defineConfig(({ mode }) => {
             vue(),
 
             laravel({
-                hotFile: "../../../public/bagistobookings-default-vite.hot",
+                hotFile: "../../../public/bagisto-product-enquiries-default-vite.hot",
                 publicDirectory: "../../../public",
-                buildDirectory: "themes/bagistobookings/default/build",
+                buildDirectory: "themes/bagisto-product-enquiries/default/build",
                 input: [
                     "src/Resources/assets/css/app.css",
                     "src/Resources/assets/js/app.js",

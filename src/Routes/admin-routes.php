@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use CodeRomeos\BagistoBookings\Http\Controllers\Admin\BagistoBookingsController;
+use CodeRomeos\BagistoProductEnquiries\Http\Controllers\Admin\BagistoProductEnquiriesController;
 
-Route::group(['middleware' => ['web', 'admin'], 'prefix' => 'admin/bagistobookings'], function () {
-    Route::controller(BagistoBookingsController::class)->group(function () {
-        Route::get('', 'index')->name('admin.bagistobookings.index');
+Route::group(['middleware' => ['web', 'admin'], 'prefix' => 'admin/bagistoProductEnquiries'], function () {
+    Route::controller(BagistoProductEnquiriesController::class)->group(function () {
+        Route::get('', 'index')->name('admin.bagistoProductEnquiries.index');
     });
 });

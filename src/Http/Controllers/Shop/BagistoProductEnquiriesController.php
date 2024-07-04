@@ -1,12 +1,12 @@
 <?php
 
-namespace CodeRomeos\BagistoBookings\Http\Controllers\Shop;
+namespace CodeRomeos\BagistoProductEnquiries\Http\Controllers\Shop;
 
 use Illuminate\Routing\Controller;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 
-class BagistoBookingsController extends Controller
+class BagistoProductEnquiriesController extends Controller
 {
     use DispatchesJobs, ValidatesRequests;
 
@@ -17,6 +17,6 @@ class BagistoBookingsController extends Controller
      */
     public function index()
     {
-        return view('bagistobookings::shop.index');
+        return view('bagistoProductEnquiries::shop.index');
     }
 }

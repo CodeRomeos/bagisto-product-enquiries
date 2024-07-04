@@ -2,9 +2,9 @@
 
 return [
     [
-        'key'   => 'bagistobookings',
-        'name'  => 'BagistoBookings',
-        'route' => 'admin.bagistobookings.index',
+        'key'   => 'bagistoProductEnquiries',
+        'name'  => 'BagistoProductEnquiries',
+        'route' => 'admin.bagistoProductEnquiries.index',
         'sort'  => 2
     ]
 ];

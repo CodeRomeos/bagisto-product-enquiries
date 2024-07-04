@@ -1,6 +1,6 @@
 <?php
 
-namespace CodeRomeos\BagistoBookings\Providers;
+namespace CodeRomeos\BagistoProductEnquiries\Providers;
 
 use Konekt\Concord\BaseModuleServiceProvider;
 

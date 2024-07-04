@@ -1,13 +1,13 @@
 <?php
 
-namespace CodeRomeos\BagistoBookings\Http\Controllers\Admin;
+namespace CodeRomeos\BagistoProductEnquiries\Http\Controllers\Admin;
 
 use Illuminate\Routing\Controller;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
-class BagistoBookingsController extends Controller
+class BagistoProductEnquiriesController extends Controller
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
@@ -18,7 +18,7 @@ class BagistoBookingsController extends Controller
      */
     public function index()
     {
-        return view('bagistobookings::admin.index');
+        return view('bagistoProductEnquiries::admin.index');
     }
 
     /**
@@ -28,7 +28,7 @@ class BagistoBookingsController extends Controller
      */
     public function create()
     {
-        return view('bagistobookings::admin.create');
+        return view('bagistoProductEnquiries::admin.create');
     }
 
     /**
@@ -48,7 +48,7 @@ class BagistoBookingsController extends Controller
      */
     public function edit(int $id)
     {
-        return view('bagistobookings::admin.edit');
+        return view('bagistoProductEnquiries::admin.edit');
     }
 
     /**

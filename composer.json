@@ -1,5 +1,5 @@
 {
-    "name": "coderomeos/bagisto-bookings",
+    "name": "coderomeos/bagisto-product-enquiries",
     "license": "MIT",
     "authors": [
         {
@@ -18,13 +18,13 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "CodeRomeos\\BagistoBookings\\": "src/"
+            "CodeRomeos\\BagistoProductEnquiries\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "CodeRomeos\\BagistoBookings\\Providers\\BagistoBookingsServiceProvider"
+                "CodeRomeos\\BagistoProductEnquiries\\Providers\\BagistoProductEnquiriesServiceProvider"
             ],
             "aliases": {}
         }

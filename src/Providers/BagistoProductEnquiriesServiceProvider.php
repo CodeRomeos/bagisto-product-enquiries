@@ -1,11 +1,11 @@
 <?php
 
-namespace CodeRomeos\BagistoBookings\Providers;
+namespace CodeRomeos\BagistoProductEnquiries\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Event;
 
-class BagistoBookingsServiceProvider extends ServiceProvider
+class BagistoProductEnquiriesServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap services.
@@ -20,12 +20,12 @@ class BagistoBookingsServiceProvider extends ServiceProvider
 
         $this->loadRoutesFrom(__DIR__ . '/../Routes/shop-routes.php');
 
-        $this->loadTranslationsFrom(__DIR__ . '/../Resources/lang', 'bagistobookings');
+        $this->loadTranslationsFrom(__DIR__ . '/../Resources/lang', 'bagistoProductEnquiries');
 
-        $this->loadViewsFrom(__DIR__ . '/../Resources/views', 'bagistobookings');
+        $this->loadViewsFrom(__DIR__ . '/../Resources/views', 'bagistoProductEnquiries');
 
         Event::listen('bagisto.admin.layout.head', function($viewRenderEventManager) {
-            $viewRenderEventManager->addTemplate('bagistobookings::admin.layouts.style');
+            $viewRenderEventManager->addTemplate('bagistoProductEnquiries::admin.layouts.style');
         });
     }
 
