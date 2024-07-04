@@ -1,0 +1,33 @@
+{
+    "name": "coderomeos/bagisto-bookings",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Abid Raza",
+            "email": "ari.abid@gmail.com"
+        },
+        {
+            "name": "Shubham Surya",
+            "email": "shubhamsurya95@gmail.com"
+        },
+        {
+            "name": "Gautam Kumar",
+            "email": "gtmkmr2u@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "CodeRomeos\\BagistoBookings\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CodeRomeos\\BagistoBookings\\Providers\\BagistoBookingsServiceProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "minimum-stability": "dev"
+}
