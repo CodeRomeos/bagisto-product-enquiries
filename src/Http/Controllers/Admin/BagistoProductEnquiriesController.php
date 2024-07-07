@@ -2,6 +2,7 @@
 
 namespace CodeRomeos\BagistoProductEnquiries\Http\Controllers\Admin;
 
+use CodeRomeos\BagistoProductEnquiries\DataGrids\ProductEnquiryDataGrid;
 use Illuminate\Routing\Controller;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -18,6 +19,10 @@ class BagistoProductEnquiriesController extends Controller
      */
     public function index()
     {
+        if (request()->ajax()) {
+            return app(ProductEnquiryDataGrid::class)->toJson();
+        }
+
         return view('bagistoProductEnquiries::admin.index');
     }
 

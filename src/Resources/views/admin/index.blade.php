@@ -2,12 +2,18 @@
 
     <!-- Title of the page -->
     <x-slot:title>
-        Package BagistoProductEnquiries
+        Product Enquiries
     </x-slot>
 
+    <div class="flex items-center justify-between gap-4 max-sm:flex-wrap pt-2">
+        <!-- Title -->
+        <p class="text-xl font-bold text-gray-800 dark:text-white">
+            Product Enquiries
+        </p>
+    </div>
     <!-- Page Content -->
     <div class="page-content">
-        <h1>Package BagistoProductEnquiries</h1>
+        <x-admin::datagrid :src="route('admin.bagistoProductEnquiries.index')" />
     </div>
 
 </x-admin::layouts>
