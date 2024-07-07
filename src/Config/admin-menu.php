@@ -6,6 +6,6 @@ return [
         'name'  => 'BagistoProductEnquiries',
         'route' => 'admin.bagistoProductEnquiries.index',
         'sort'  => 2,
-        'icon'  => 'temp-icon',
+        'icon'  => 'icon-sales',
     ]
 ];
