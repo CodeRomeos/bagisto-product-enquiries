@@ -2,6 +2,7 @@
 
 namespace CodeRomeos\BagistoProductEnquiries\Providers;
 
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Event;
 
@@ -27,6 +28,8 @@ class BagistoProductEnquiriesServiceProvider extends ServiceProvider
         Event::listen('bagisto.admin.layout.head', function($viewRenderEventManager) {
             $viewRenderEventManager->addTemplate('bagistoProductEnquiries::admin.layouts.style');
         });
+
+        Blade::component('bagistoProductEnquiries::shop.components.product-enquiry-form', 'bagistoProductEnquiries::product-enquiry-form');
     }
 
     /**
