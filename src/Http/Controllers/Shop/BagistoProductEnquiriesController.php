@@ -35,6 +35,7 @@ class BagistoProductEnquiriesController extends Controller
         $data = [
             'customer_id' => optional($request->user())->id,
             'product_id' => $request->product_id,
+            'product_name' => $request->product_name,
             'name' => $request->name,
             'email' => $request->email,
             'phone' => $request->phone,
