@@ -33,8 +33,9 @@ class BagistoProductEnquiriesController extends Controller
     public function store(Request $request)
     {
         $data = [
-            'customer_id' => $request->user()->id,
+            'customer_id' => optional($request->user())->id,
             'product_id' => $request->product_id,
+            'product_name' => $request->product_name,
             'name' => $request->name,
             'email' => $request->email,
             'phone' => $request->phone,

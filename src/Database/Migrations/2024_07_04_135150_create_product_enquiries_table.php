@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('customer_id')->index()->nullable();
             $table->unsignedBigInteger('product_id')->index()->nullable();
+            $table->string('product_name')->index()->nullable();
             $table->string('name')->index()->nullable();
             $table->string('email')->index()->nullable();
             $table->string('phone')->index()->nullable();

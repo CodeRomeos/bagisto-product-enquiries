@@ -15,14 +15,14 @@ class ProductEnquiryDataGrid extends DataGrid
     public function prepareQueryBuilder()
     {
         $queryBuilder = DB::table('product_enquiries')
-            ->leftJoin('product_flat as pr', 'product_enquiries.product_id', '=', 'pr.id')
-            ->select('pr.name as product_name', 'product_enquiries.product_id', 'product_enquiries.id', 'product_enquiries.name', 'email', 'phone', 'message', 'ip', 'product_enquiries.created_at');
+            ->select('product_name', 'product_id', 'id', 'name', 'email', 'phone', 'message', 'ip', 'created_at');
 
-        $this->addFilter('product_id', 'product_enquiries.product_id');
-        $this->addFilter('product_name', 'pr.name');
-        $this->addFilter('name', 'product_enquiries.name');
-        $this->addFilter('email', 'product_enquiries.email');
-        $this->addFilter('phone', 'product_enquiries.phone');
+        $this->addFilter('product_id', 'product_id');
+        $this->addFilter('product_name', 'product_name');
+        $this->addFilter('name', 'name');
+        $this->addFilter('email', 'email');
+        $this->addFilter('phone', 'phone');
+        $this->addFilter('ip', 'ip');
 
         return $queryBuilder;
     }
@@ -45,7 +45,7 @@ class ProductEnquiryDataGrid extends DataGrid
 
         $this->addColumn([
             'index'      => 'product_id',
-            'label'      => 'Product ID',
+            'label'      => 'Product',
             'type'       => 'dropdown',
             'options'    => [
                 'type'   => 'searchable',
@@ -95,6 +95,15 @@ class ProductEnquiryDataGrid extends DataGrid
         $this->addColumn([
             'index'      => 'message',
             'label'      => 'Message',
+            'type'       => 'string',
+            'searchable' => true,
+            'filterable' => true,
+            'sortable'   => true,
+        ]);
+
+        $this->addColumn([
+            'index'      => 'ip',
+            'label'      => 'IP',
             'type'       => 'string',
             'searchable' => true,
             'filterable' => true,
