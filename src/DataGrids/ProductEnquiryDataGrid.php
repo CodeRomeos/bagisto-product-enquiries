@@ -46,22 +46,14 @@ class ProductEnquiryDataGrid extends DataGrid
         $this->addColumn([
             'index'      => 'product_id',
             'label'      => 'Product',
-            'type'       => 'dropdown',
-            'options'    => [
-                'type'   => 'searchable',
-                'params' => [
-                    'repository' => \Webkul\Product\Repositories\ProductFlatRepository::class,
-                    'column'     => [
-                        'label' => 'name',
-                        'value' => 'id',
-                    ],
-                ],
-            ],
+            'type'               => 'string',
+            'filterable'         => true,
+            'filterable_type'    => 'dropdown',
+            'filterable_options'    => app('Webkul\Product\Repositories\ProductFlatRepository')->all(['name as label', 'id as value'])->toArray(),
             'closure' => function ($value) {
                 return "<a style='color:blue' href='/admin/catalog/products/edit/$value->product_id' target='_blank'>$value->product_name</a>";
             },
             'searchable' => true,
-            'filterable' => true,
             'sortable'   => true,
         ]);
 
@@ -113,7 +105,8 @@ class ProductEnquiryDataGrid extends DataGrid
         $this->addColumn([
             'index'      => 'created_at',
             'label'      => trans('admin::app.catalog.attributes.index.datagrid.created-at'),
-            'type'       => 'date_range',
+            'type'            => 'date',
+            'filterable_type'  => 'date_range',
             'searchable' => true,
             'filterable' => true,
             'sortable'   => true,
