@@ -3,8 +3,9 @@
         <div>
             <label for="product_id">Product</label>
             <input type="text" class="block w-full px-4 py-3.5 border border-['#E3E3E3'] rounded-xl text-gray-900"
-                name="product_name" value="{{ $product->name }}" placeholder="Product" required readonly disabled>
-            <input type='hidden' name="product_id" value="{{ $product->id }}">
+                name="product_name" value="{{ optional($product)->name }}" placeholder="Product" required readonly
+                disabled>
+            <input type='hidden' name="product_id" value="{{ optional($product)->id }}">
         </div>
         <div>
             <label for="name">Name</label>
