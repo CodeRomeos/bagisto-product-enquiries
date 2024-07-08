@@ -44,12 +44,12 @@ class ProductEnquiryDataGrid extends DataGrid
         ]);
 
         $this->addColumn([
-            'index'      => 'product_id',
+            'index'      => 'product_name',
             'label'      => 'Product',
             'type'               => 'string',
             'filterable'         => true,
-            'filterable_type'    => 'dropdown',
-            'filterable_options'    => app('Webkul\Product\Repositories\ProductFlatRepository')->all(['name as label', 'id as value'])->toArray(),
+            // 'filterable_type'    => 'dropdown',
+            // 'filterable_options'    => app('Webkul\Product\Repositories\ProductFlatRepository')->all(['name as label', 'id as value'])->toArray(),
             'closure' => function ($value) {
                 return "<a style='color:blue' href='/admin/catalog/products/edit/$value->product_id' target='_blank'>$value->product_name</a>";
             },
@@ -105,8 +105,9 @@ class ProductEnquiryDataGrid extends DataGrid
         $this->addColumn([
             'index'      => 'created_at',
             'label'      => trans('admin::app.catalog.attributes.index.datagrid.created-at'),
-            'type'            => 'date',
-            'filterable_type'  => 'date_range',
+            'type'       => 'string',
+            // 'type'            => 'date',
+            // 'filterable_type'  => 'date_range',
             'searchable' => true,
             'filterable' => true,
             'sortable'   => true,
